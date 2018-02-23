@@ -15,7 +15,7 @@ import { AnimalPipe } from './animal.pipe';
                   AnimalListComponent,
                   EditAnimalComponent,
                   NewAnimalComponent,
-                  CompletenessPipe],
+                  AnimalPipe],
   bootstrap: [AppComponent]
 })
 
