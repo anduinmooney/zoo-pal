@@ -11,10 +11,7 @@ import { Animal } from './animal.model';
       <option value="adultAnimal" selected="selected">Adult Zoo Animals</option>
     </select>
     <ul>
-      <li (click)="currentAge(currentAnimal)" *ngFor="let currentAnimal of childAnimalList | age:filterByAge">{{currentAnimal.species}} {{currentAnimal.name}} {{currentAnimal.age}} {{currentAnimal.diet}} {{currentAnimal.location}} {{currentAnimal.caretakers}} {{currentAnimal.sex}} {{currentAnimal.likes}} {{currentAnimal.dislikes}}
-        <input *ngIf="currentAnimal.age < 2" type="checkbox" checked (click)="toggleAge(currentAnimal, false)"/>
-        <input *ngIf="currentAnimal.age > 2" type="checkbox" (click)="toggleAge(currentAnimal, true)"/>
-        <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
+      <li (click)="currentAge(currentAnimal)" *ngFor="let currentAnimal of childAnimalList | age:filterByAge"><div class = "name">Name: {{currentAnimal.name}} <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button></div> Species: {{currentAnimal.species}}<br> Age: {{currentAnimal.age}}<br> Diet: {{currentAnimal.diet}}<br> Location: {{currentAnimal.location}}<br> Amount of Caretakers: {{currentAnimal.caretakers}}<br> Gender: {{currentAnimal.sex}} <br> Likes: {{currentAnimal.likes}}<br> Dislikes: {{currentAnimal.dislikes}}
       </li>
     </ul>
   `
@@ -30,14 +27,6 @@ export class AnimalListComponent {
 
   onChange(optionFromMenu) {
   this.filterByAge = optionFromMenu;
-  }
-
-  currentAge(clickedAnimal: Animal) {
-    if(clickedAnimal.age < 2) {
-      alert("This animal is young!");
-    } else {
-      alert("This animal is an adult!");
-    }
   }
 
   toggleAge(clickedAnimal: Animal, setAge: number) {
