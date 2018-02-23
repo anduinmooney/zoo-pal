@@ -2,7 +2,7 @@ import {Pipe, PipeTransform} from '@angular/core';
 import {Animal} from './animal.model';
 
 @Pipe({
-  name: "completeness",
+  name: "age",
   pure: false
 })
 export class AnimalPipe implements PipeTransform {
