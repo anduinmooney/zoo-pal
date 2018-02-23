@@ -39,9 +39,7 @@ import { Animal } from './animal.model';
   </div>
   <div>
     <label>Enter Animal Dislikes:</label>
-    <input #newSpecies>
-  </div>
-  <div>
+    <input #newDislikes>
     <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value='';">Add</button>
   </div>
   `
