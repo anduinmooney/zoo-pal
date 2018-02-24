@@ -5,12 +5,14 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
   <div class="container">
-    <h1>Animal List for {{month}}/{{day}}/{{year}}</h1>
-    <h3>{{currentFocus}}</h3>
-    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-    <hr>
-    <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
-    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+    <div class = "jumbotron">
+      <h1>Zoo Pal!</h1>
+      <h2>Animal List for {{month}}/{{day}}/{{year}}</h2>
+      <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+      <hr>
+      <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+      <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+    </div>
   </div>
   `
 })
