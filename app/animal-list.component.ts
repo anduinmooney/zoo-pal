@@ -10,6 +10,8 @@ import { Animal } from './animal.model';
       <option value="allAnimals">All Zoo Animals</option>
       <option value="youngAnimal">Young Zoo Animals</option>
       <option value="adultAnimal" selected="selected">Adult Zoo Animals</option>
+      <option value="carnivore">Carnivore Animals</option>
+      <option value="herbivore">Herbivore Animals</option>
     </select>
       <ul>
         <li  *ngFor="let currentAnimal of childAnimalList | age:filterByAge"><div class = "name">Name: {{currentAnimal.name}} <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button></div> Species: {{currentAnimal.species}}<br> Age: {{currentAnimal.age}}<br> Diet: {{currentAnimal.diet}}<br> Location: {{currentAnimal.location}}<br> Amount of Caretakers: {{currentAnimal.caretakers}}<br> Gender: {{currentAnimal.sex}} <br> Likes: {{currentAnimal.likes}}<br> Dislikes: {{currentAnimal.dislikes}}<br> Date Admitted: {{currentAnimal.date}}
@@ -31,7 +33,8 @@ export class AnimalListComponent {
   this.filterByAge = optionFromMenu;
   }
 
-  toggleAge(clickedAnimal: Animal, setAge: number) {
+  toggleAge(clickedAnimal: Animal, setAge: number, setDiet: string) {
      clickedAnimal.age = setAge;
+     clickedAnimal.diet = setDiet;
    }
 }

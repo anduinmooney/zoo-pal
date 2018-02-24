@@ -8,7 +8,7 @@ import {Animal} from './animal.model';
 export class AnimalPipe implements PipeTransform {
 
 
-  transform(input: Animal[], age) {
+  transform(input: Animal[], age, diet) {
     var output: Animal[] = [];
     if(age === "youngAnimal") {
       for (var i = 0; i < input.length; i++) {
@@ -20,6 +20,20 @@ export class AnimalPipe implements PipeTransform {
     } else if (age === "adultAnimal") {
       for (var i = 0; i < input.length; i++) {
         if (input[i].age >= 3) {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (diet === "carnivore") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].diet = "carnivore") {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (diet === "herbivore") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].diet = "herbivore") {
           output.push(input[i]);
         }
       }
