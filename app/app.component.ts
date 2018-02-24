@@ -26,8 +26,8 @@ export class AppComponent {
     selectedAnimal = null;
 
       masterAnimalList: Animal[] = [
-        new Animal("Girrafe", "Bigglesworth", 7, "Herbivore", "SafariLand", 5, "Male", "Food", "Being Hungry"),
-        new Animal("Elephant", "Dumbo", 2, "Herbivore", "SafariLand", 10, "Male", "Bathes", "Crowds")
+        new Animal("Girrafe", "Bigglesworth", 7, "Herbivore", "SafariLand", 5, "Male", "Food", "Being Hungry", "2017-01-05"),
+        new Animal("Elephant", "Dumbo", 2, "Herbivore", "SafariLand", 10, "Male", "Being Bathed", "Crowds", "2018-02-17")
       ];
 
   editAnimal(clickedAnimal) {

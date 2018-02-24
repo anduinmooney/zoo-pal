@@ -12,7 +12,7 @@ import { Animal } from './animal.model';
       <option value="adultAnimal" selected="selected">Adult Zoo Animals</option>
     </select>
       <ul>
-        <li  *ngFor="let currentAnimal of childAnimalList | age:filterByAge"><div class = "name">Name: {{currentAnimal.name}} <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button></div> Species: {{currentAnimal.species}}<br> Age: {{currentAnimal.age}}<br> Diet: {{currentAnimal.diet}}<br> Location: {{currentAnimal.location}}<br> Amount of Caretakers: {{currentAnimal.caretakers}}<br> Gender: {{currentAnimal.sex}} <br> Likes: {{currentAnimal.likes}}<br> Dislikes: {{currentAnimal.dislikes}}
+        <li  *ngFor="let currentAnimal of childAnimalList | age:filterByAge"><div class = "name">Name: {{currentAnimal.name}} <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button></div> Species: {{currentAnimal.species}}<br> Age: {{currentAnimal.age}}<br> Diet: {{currentAnimal.diet}}<br> Location: {{currentAnimal.location}}<br> Amount of Caretakers: {{currentAnimal.caretakers}}<br> Gender: {{currentAnimal.sex}} <br> Likes: {{currentAnimal.likes}}<br> Dislikes: {{currentAnimal.dislikes}}<br> Date Admitted: {{currentAnimal.date}}
         </li>
       </ul>
     </div>
